@@ -126,29 +126,8 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
         <h2 style="margin-top: 1em;">Latest Dev Blogs</h2>
         <p>Coming Soon!</p>
-    </section>
-    <section id="staff">
-        <figure>
-            <img src="../assets/images/logo.png" alt="Elitezen"/>
 
-            <figcaption>
-                <h3>Community Developer</h3>
-                <p>Elitezen</p>
-                <ul>
-                    <li>
-                        <p>Discord: @elitezen</p>
-                    </li>
-
-                    <li>
-                        <p>GitHub: <a href="@">Elitezen</a></p>
-                    </li>
-
-                    <li>
-                        <p>Roblox: <a href="@">@AMaskFromSpace</a></p>
-                    </li>
-                </ul>
-            </figcaption>
-        </figure>
+        <p style="margin-top: 5em;">Website developed by <a href="https://www.roblox.com/users/4042612386/profile">Elitezen</a></p>
     </section>
 </template>
 
@@ -347,52 +326,6 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 5em 0;
-}
-
-#staff {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em 0;
-
-    figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        padding: 0 1.25em;
-
-        h3 {
-            font-size: 2rem;
-        }
-
-        img {
-            width: 70% !important;
-            margin: 0 0 3em 0;
-            border-radius: 5px;
-        }
-
-        figcaption {
-            padding: 0 1em;
-            font-size: 1.25rem;
-
-            p {
-                margin-top: 0.75em;
-                margin-bottom: 0.75em;
-            }
-
-            ul {
-                list-style: none;
-
-                li {
-                    a {
-                        color: inherit;
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width:1000px) {
