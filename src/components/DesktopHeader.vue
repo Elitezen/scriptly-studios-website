@@ -28,7 +28,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="https://discord.com/invite/scriptly">
                         <p>Discord</p>
                     </a>
                 </li>

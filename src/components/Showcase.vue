@@ -40,17 +40,17 @@ const games:GameData[] = [
 const buttons = [
     {
         color: 'blue',
-        url: '#',
+        url: 'https://discord.com/invite/scriptly',
         iconURL: discordLogo
     },
     {
         color: 'blue',
-        url: '#',
+        url: 'https://www.youtube.com/channel/UCJV2MmXzD-4OCAsKGRzZXzA',
         iconURL: youtubeLogo
     },
     {
         color: 'blue',
-        url: '#',
+        url: 'https://www.roblox.com/groups/4345585/Scriptly-Studios#!/about',
         iconURL: robloxLogo
     }
 ]
@@ -96,7 +96,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
             </figcaption>
         </figure>
 
-        <a href="#" id="play-flag-wars">
+        <a href="https://www.roblox.com/games/3214114884/Flag-Wars" id="play-flag-wars">
             <p>Play Flag Wars</p>
         </a>
     </section>
@@ -125,9 +125,19 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         <p>Coming Soon!</p>
 
         <h2 style="margin-top: 1em;">Latest Dev Blogs</h2>
-        <p>Coming Soon!</p>
+        
+        <div class="dev-blog">
+            <img src="../assets/images/cylipson-icon.webp" class="" />
+            <h3>By Cylipson</h3>
+            <h4>Published January 30th, 2024</h4>
 
-        <p style="margin-top: 5em;">Website developed by <a href="https://www.roblox.com/users/4042612386/profile">Elitezen</a></p>
+            <p>Welcome to our website! In the future when we release new updates we will be posting all the details here 😉 </p>
+        </div>
+
+        <span>
+            <img src="../assets/images/elitezen-icon.webp" />
+            <p>Website developed by <a href="https://github.com/Elitezen">Elitezen</a></p>
+        </span>
     </section>
 </template>
 
@@ -326,6 +336,52 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 5em 0;
+
+    .dev-blog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5em 0;
+
+        img {
+            width: clamp(200px, 40%, 500px);
+            border-radius: 10px;
+            margin: 2em 0;
+        }
+
+        h4 {
+            color: lightgray
+        }
+
+        p {
+            max-width: 60ch;
+            margin: auto;
+            padding: 2em;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        aspect-ratio: 1/1;
+        height: auto;
+        width: clamp(100px, 5vw, 150px);
+        border-radius: 5em;
+        margin: 0 2em;
+    }
 }
 
 @media screen and (max-width:1000px) {
