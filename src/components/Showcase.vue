@@ -392,12 +392,12 @@ h2 {
 
         p {
             margin: 0.5em 0;
-            font-size: 2rem;
+            font-size: 1rem;
         }
 
         span {
             font-family: Arial, Helvetica, sans-serif;
-            max-width: 30ch;
+            max-width: 25ch;
         }
 
         a {
