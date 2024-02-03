@@ -8,8 +8,21 @@ import discordLogo from '../assets/images/discord-logo.png';
 import youtubeLogo from '../assets/images/youtube-logo.png';
 import robloxLogo from '../assets/images/roblox-logo.webp';
 
+import xjevonIcon from '../assets/images/xjevon-icon.jpg';
+import pinkMinkIcon from '../assets/images/pinkmink-icon.jpg';
+import youngTrapDiddyIcon from '../assets/images/youngtrapdiddy-icon.jpg';
+import jabaweeIcon from '../assets/images/jabawee-icon.jpg';
+import kitJellyStudios from '../assets/images/kitjellystudios-icon.jpg';
+
 type GameData = {
     name: string;
+    iconURL: string;
+    pageURL: string;
+}
+
+type YoutuberData = {
+    name: string;
+    description: string;
     iconURL: string;
     pageURL: string;
 }
@@ -36,6 +49,39 @@ const games:GameData[] = [
         pageURL: 'https://www.roblox.com/games/2266829809/Moving-Day-Story'
     }
 ];
+
+const youtubers:YoutuberData[] = [
+    {
+        name: 'xJevon',
+        description: 'My name is Jevon, I play Roblox!',
+        iconURL: xjevonIcon,
+        pageURL: 'https://www.youtube.com/@xJevon/featured'
+    },
+    {
+        name: 'Pink Mink',
+        description: 'Hey noobs :D I\'m Pink Mink and welcome to my channel! ',
+        iconURL: pinkMinkIcon,
+        pageURL: 'https://www.youtube.com/@PinkMinkk/featured'
+    },
+    {
+        name: 'YoungTrapDiddy',
+        description: "Greetings to my channel! I'm a Roblox Star creator dedicated to producing engaging gaming content. Show some support and Join My Group On Roblox! Veil Diddy CITY!",
+        iconURL: youngTrapDiddyIcon,
+        pageURL: 'https://www.youtube.com/@trapdiddy/featured'
+    },
+    {
+        name: 'Jabawee',
+        description: 'Mostly doing Flag Wars stuff / Admin for Scriptly Studios',
+        iconURL: jabaweeIcon,
+        pageURL: 'https://www.youtube.com/@jabawee/featured'
+    },
+    {
+        name: 'Kit-Jelly Studios',
+        description: "Hey! It's kit-jelly studios here, On this channel I mostly make Roblox content especially flag wars!",
+        iconURL: kitJellyStudios,
+        pageURL: 'https://www.youtube.com/@kit-jellystudios/featured'
+    }
+]
 
 const buttons = [
     {
@@ -120,10 +166,28 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
         <p>⭐ Also Checkout <a href="https://www.roblox.com/groups/16132775/Pixel-Play-Trends#!/about" target="_blank">Pixel-Play Trends</a>!</p>
     </section>
-    <section id="dev-blogs">
-        <h2>Top Content Creators</h2>
-        <p>Coming Soon!</p>
 
+    <section id="youtubers">
+        <h2>Top Content Creators</h2>
+
+        <carousel ref="carousel" :items-to-show="1.5" :wrap-around="true" :autoplay="3_250" id="carousel">
+            <slide v-for="(youtuber, i) in youtubers" :key="i" class="slide">
+                <img :src="youtuber.iconURL" class="slide-image"/>
+                <p>{{ youtuber.name }}</p>
+                <span>{{ youtuber.description }}</span>
+                <a :href="youtuber.pageURL">
+                    <p>View Page</p>
+                </a>
+            </slide>
+
+            <template #addons>
+            <navigation />
+            <pagination />
+            </template>
+        </carousel>
+    </section>
+
+    <section id="dev-blogs">
         <h2 style="margin-top: 1em;">Latest Dev Blogs</h2>
         
         <div class="dev-blog">
@@ -294,6 +358,58 @@ h2 {
 
     p {
         font-size: 1.3rem;
+    }
+}
+
+#youtubers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3em 0;
+    background-color: rgba(255, 255, 255, 0.435);
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    span {
+        color: lightgray;
+        font-family: inherit;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            aspect-ratio: 1/1;
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        p {
+            margin: 0.5em 0;
+            font-size: 2rem;
+        }
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 30ch;
+        }
+
+        a {
+            background-color: rgb(244, 88, 36);
+            font-size: 1rem;
+            text-decoration: none;
+            color: #FFF;
+            font-weight: 500;
+            padding: 0em 2.3em;
+            margin: 0.3em 0;
+            border-radius: 5px;
+        }
     }
 }
 
