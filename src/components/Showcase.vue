@@ -13,6 +13,7 @@ import pinkMinkIcon from '../assets/images/pinkmink-icon.jpg';
 import youngTrapDiddyIcon from '../assets/images/youngtrapdiddy-icon.jpg';
 import jabaweeIcon from '../assets/images/jabawee-icon.jpg';
 import kitJellyStudios from '../assets/images/kitjellystudios-icon.jpg';
+import theLightningStudios from '../assets/images/the-lightning-studios.jpg'
 
 type GameData = {
     name: string;
@@ -80,6 +81,12 @@ const youtubers:YoutuberData[] = [
         description: "Hey! It's kit-jelly studios here, On this channel I mostly make Roblox content especially flag wars!",
         iconURL: kitJellyStudios,
         pageURL: 'https://www.youtube.com/@kit-jellystudios/featured'
+    },
+    {
+        name: 'The Lightning Studios',
+        description: 'Welcome to my channel! I do Flag Wars and Bedwars content. Feel free to subscribe and like my videos!',
+        iconURL: theLightningStudios,
+        pageURL: 'https://www.youtube.com/@Lightning_Master2020/community'
     }
 ]
 
@@ -175,7 +182,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
                 <img :src="youtuber.iconURL" class="slide-image"/>
                 <p>{{ youtuber.name }}</p>
                 <span>{{ youtuber.description }}</span>
-                <a :href="youtuber.pageURL">
+                <a :href="youtuber.pageURL" target="_blank">
                     <p>View Page</p>
                 </a>
             </slide>
