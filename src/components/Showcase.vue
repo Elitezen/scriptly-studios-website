@@ -133,6 +133,11 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
                     </a>
                 </li>
             </ul>
+
+            <h4>
+                👋 Attention: We are conducting a survey on the state of Flag Wars.<br />
+                Feel free to fill out the <a href="https://forms.gle/apo4MARUC43LveBR8" target="_blank">Google Form Survey</a>. Thank you! 😇
+            </h4>
         </div>
     </section>
     <section id="flag-wars">
@@ -290,6 +295,14 @@ h2 {
                 transform: scale(1.05) !important;
             }
         }
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 2em 0;
+        padding: 0 2em;
+        font-weight: 400;
     }
 }
 
