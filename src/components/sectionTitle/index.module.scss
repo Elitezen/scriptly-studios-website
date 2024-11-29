@@ -1,0 +1,16 @@
+@use "../../variables";
+
+.sectionTitle {
+    margin: 2em 0;
+
+    .sectionTitleContainer {
+        h1 {
+            display: inline-block;
+            font-size: 3em;
+            font-weight: 500;
+            text-align: left;
+            border-bottom: 1px solid lightgray;
+            padding: 0 1em 0.15em 0;
+        }
+    }
+}

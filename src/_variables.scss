@@ -1,0 +1,45 @@
+@use "sass:map";
+
+$colors: (
+    background: #000,
+    discord: #5865F2,
+    primary: #AE02DD
+);
+
+$font-sizes: (
+  xs: 0.5rem,    // Extra Small text (e.g., captions)
+  sm: 0.75rem,   // Small text (e.g., subtitles)
+  base: 1rem,     // Base text (e.g., body text)
+  lg: 1.5rem,    // Large text (e.g., section headings)
+  xl: 2rem,     // Extra Large text (e.g., primary headings)
+  xxl: 4rem,      // Double Extra Large (e.g., page titles)
+  hero: 8rem      // Hero text (e.g., main banner text)
+);
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin square-element($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin font-size($val) {
+    font-size: map.get($font-sizes, $val);
+}
+
+@mixin section {
+    padding: 3em;
+    margin: 8em 0;
+}
+
+@function font-size-val($val) {
+    @return map.get($font-sizes, $val);
+}

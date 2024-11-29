@@ -1,0 +1,67 @@
+@use "../../../../variables";
+
+.showcase {
+    background-image: url("../../../../assets/images/wallpaper/flag-wars-0.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .contentContainer {
+        padding: 6em;
+
+        .heroContainer {
+            @include variables.flex-row;
+            gap: 1em;
+            align-items: center;
+
+            .textContainer {
+                .heroTextContainer {
+                    flex: 2;
+    
+                    h1, p {
+                        color: #FFF;
+                        margin: 0.3em 0;
+                    }
+    
+                    h1 {
+                        line-height: 1;
+                        font-weight: 600;
+                        font-size: clamp(
+                            variables.font-size-val("base"),
+                            10vw,
+                            variables.font-size-val("hero")
+                        )
+                    }
+    
+                    p {
+                        max-width: 80%;
+                        font-weight: 200;
+                        font-size: clamp(
+                            variables.font-size-val("lg"),
+                            2vw,
+                            variables.font-size-val("xl")
+                        )
+                    }
+                }
+            }
+    
+            .imageContainer {
+                flex: 1;
+    
+                img {
+                    border-radius: 50%;
+                    box-shadow: 5px 5px 15px #000;
+                    @include variables.square-element(
+                        clamp(
+                            300px,
+                            30vw,
+                            600px
+                        )
+                    );
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

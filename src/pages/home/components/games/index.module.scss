@@ -1,0 +1,75 @@
+@use "../../../../variables";
+
+$flex-gap: 0.5em;
+
+.games {
+    @include variables.section;
+
+    .contentContainer {
+        .gameGrid {
+            align-self: center;
+            @include variables.flex-row;
+            gap: $flex-gap;
+            height: clamp(20em, 60vw, 40em);
+
+            .largeGame, .smallGamesRow .smallGame {
+                background-position: center;
+                position: relative;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: transform 150ms ease-in-out;
+
+                .gameTextContainer {
+                    position: absolute;
+                    bottom: 0;
+                    padding: 1em;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    width: 100%;
+
+                    h2, h3, p {
+                        color: #FFF;
+                        // text-shadow: 3px 3px 10px #000;
+                    }
+
+                    h2 {
+                        @include variables.font-size("xl");
+                        font-weight: 500;
+                    }
+
+                    h3 {
+                        @include variables.font-size("base");
+                        font-weight: 400;
+                    }
+
+                    p {
+                        margin: 0.5em 0;
+                        max-width: 90%;
+                        font-weight: 400;
+                    }
+                }
+
+                &:hover { 
+                    cursor: pointer;
+                    transform: scale(1.015);
+                }
+            }
+
+            .largeGame {
+                position: relative;
+                height: 100%;
+                flex: 7;
+            }
+
+            .smallGamesRow {
+                flex: 3;
+                @include variables.flex-column;
+                justify-content: space-evenly;
+                gap: $flex-gap;
+
+                .smallGame {
+                    height: 33%;
+                }
+            }
+        }
+    }
+}

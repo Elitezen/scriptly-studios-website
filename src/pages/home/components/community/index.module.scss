@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "../../../../variables";
+
+.community {
+    .contentContainer {
+        @include variables.section;
+        @include variables.flex-row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin: auto;
+
+        .imageSide, .textSide {
+            width: 50%;
+        }
+
+        .imageSide {
+            img {
+                @include variables.square-element(50%);
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .textSide {
+            .text {
+                h3 {
+                    @include variables.font-size("xxl");
+                    font-weight: 600;
+                }
+    
+                p {
+                    @include variables.font-size("base");
+                    margin-top: 1em;
+                }
+            }
+
+            .buttonContainer {
+                margin-top: 2em;
+
+                a {
+                    button {
+                        @include variables.font-size("base");
+                        padding: 1em 3em;
+                        border: 2px solid map.get(variables.$colors, "discord");
+                        border-radius: 4px;
+                        background-color: map.get(variables.$colors, "discord");
+                        color: #FFF;
+
+                        transition: background-color 150ms ease-in-out;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: transparent;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use "../../../../variables";
+
+.creators {
+    @include variables.section;
+
+    .contentContainer {
+        .carouselContainer {
+            position: relative;
+            overflow: hidden;
+
+            .slide {
+                display: inline-block; // Ensures horizontal layout
+                white-space: "normal"; // Prevents breaking layout
+                height: 40vw;
+
+                .creator {
+                    @include variables.flex-column;
+                    align-items: center;
+
+                    margin: auto;
+                    width: 50vw;
+
+                    img {
+                        margin: 1em;
+                        width: 50%;
+                    }
+
+                    .textContainer {
+                        @include variables.flex-column;
+                        align-items: center;
+
+                        margin: 1em;
+
+                        h3, p {
+                            margin: 0.5em 0;
+                        }
+
+                        p {
+                            width: 50ch;
+                            text-align: center;
+                            white-space: wrap;
+                        }
+                    }
+                }
+            }
+
+            .carousel {
+                @include variables.flex-column;
+                align-items: center;
+
+                .navContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 50%;
+                    width: 90%;
+
+                    .navButton {
+                        border: none;
+                        background-color: transparent;
+                        padding: 0em 1em;
+
+                        img {
+                            @include variables.square-element(5vw)
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "../../../../variables";
+
+$border-width: 5px;
+
+.navLink {
+    @include variables.flex-row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    border-bottom: $border-width solid transparent;
+
+    .icon, p {
+        margin-top: 0.256em;
+    }
+
+    .icon {
+        @include variables.square-element(2em);
+        margin-right: 0.75em;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-bottom: $border-width solid map.get(variables.$colors, "primary");
+    }
+}

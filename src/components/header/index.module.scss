@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "../../variables";
+
+header {
+    color: #FFF;
+    background-color: #000;
+
+    .contentContainer {
+        @include variables.flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5em;
+
+        .textContainer {
+            @include variables.flex-row;
+            align-items: center;
+
+            img {
+                @include variables.square-element(2.5em);
+                margin-right: 1em;
+            }
+
+            h1 {
+                @include variables.font-size("lg");
+                font-weight: 600;
+            }
+        }
+
+        .navContainer {
+            nav {
+                ul {
+                    @include variables.flex-row;
+                    list-style: none;
+
+                    li {
+                        margin: 0 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}
