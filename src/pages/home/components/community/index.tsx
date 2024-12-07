@@ -13,7 +13,11 @@ function Community() {
                 <div className={styles.textSide}>
                     <div className={styles.text}>
                         <h3>Join the Community</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, modi.</p>
+                        <p>
+                            Become part of Scriptly Studios' core community!
+                            Talk with other players, join giveaways, and notified
+                            of upcoming events, updates, and gamenights.
+                        </p>
                     </div>
 
                     <div className={styles.buttonContainer}>

@@ -1,8 +1,13 @@
 import styles from "./index.module.scss";
+import useWindowWidth from "../../../../(util)/useWindowWidth";
 
 import scriptlyStudiosLogoHd from "../../../../assets/images/icons/scriptly-studios-logo-hd.webp";
 
+const SCREEN_WIDTH_BREAKPOINT = 815;
+
 function Showcase() {
+    const screenWidth = useWindowWidth();
+
     return (
         <section className={styles.showcase}>
             <div className={styles.contentContainer}>
@@ -10,7 +15,7 @@ function Showcase() {
                     <div className={styles.textContainer}>
                         <div className={styles.heroTextContainer}>
                             <h1>
-                                Scriptly Studios
+                                Scriptly{screenWidth > SCREEN_WIDTH_BREAKPOINT ? <br /> : <> </>}Studios
                             </h1>
 
                             <p>

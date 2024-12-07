@@ -1,5 +1,7 @@
 @use "../../../../variables";
 
+$screen-width-breakpoint: 815px;
+
 .showcase {
     background-image: url("../../../../assets/images/wallpaper/flag-wars-0.png");
     background-size: cover;
@@ -7,7 +9,7 @@
     background-repeat: no-repeat;
 
     .contentContainer {
-        padding: 6em;
+        padding: 4em 12vw;
 
         .heroContainer {
             @include variables.flex-row;
@@ -24,22 +26,23 @@
                     }
     
                     h1 {
-                        line-height: 1;
+                        line-height: 1.1;
                         font-weight: 600;
                         font-size: clamp(
-                            variables.font-size-val("base"),
+                            variables.font-size-val("xl"),
                             10vw,
-                            variables.font-size-val("hero")
+                            10em
                         )
                     }
     
                     p {
+                        line-height: 1.2;
                         max-width: 80%;
                         font-weight: 200;
                         font-size: clamp(
-                            variables.font-size-val("lg"),
-                            2vw,
-                            variables.font-size-val("xl")
+                            variables.font-size-val("base"),
+                            1.7vw,
+                            variables.font-size-val("lg")
                         )
                     }
                 }
@@ -54,12 +57,34 @@
                     @include variables.square-element(
                         clamp(
                             300px,
-                            30vw,
+                            25vw,
                             600px
                         )
                     );
                     display: block;
                     margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-width-breakpoint) {
+    .showcase {
+        .contentContainer {
+            padding: 2em;
+
+            .heroContainer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-self: center;
+                text-align: center;
+
+                .textContainer {
+                    p {
+                        max-width: none !important;
+                    }
                 }
             }
         }

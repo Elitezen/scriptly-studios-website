@@ -7,11 +7,12 @@
         .carouselContainer {
             position: relative;
             overflow: hidden;
+            background-color: red;
 
             .slide {
                 display: inline-block; // Ensures horizontal layout
                 white-space: "normal"; // Prevents breaking layout
-                height: 40vw;
+                height: 50vw;
 
                 .creator {
                     @include variables.flex-column;

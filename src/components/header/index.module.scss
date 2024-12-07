@@ -9,7 +9,7 @@ header {
         @include variables.flex-row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1.5em;
+        padding: 0em 1.5em;
 
         .textContainer {
             @include variables.flex-row;
@@ -36,6 +36,17 @@ header {
                         margin: 0 0.5em;
                     }
                 }
+            }
+        }
+
+        .navButton {
+            margin: 1em 0;
+            background-color: transparent;
+            border: none;
+
+            img {
+                @include variables.square-element(3.5em);
+                filter: invert(1);
             }
         }
     }

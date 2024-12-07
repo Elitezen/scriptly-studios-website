@@ -1,5 +1,7 @@
 @use "../../variables";
 
+$screen-width-breakpoint: 550px;
+
 .footer {
     background-color: #000;
     color: #FFF;
@@ -29,6 +31,15 @@
                     opacity: 0.5;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-width-breakpoint) {
+    .footer {
+        ul {
+            @include variables.flex-column;
+            margin: 2em 0;
         }
     }
 }

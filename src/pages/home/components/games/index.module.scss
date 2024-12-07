@@ -1,6 +1,7 @@
 @use "../../../../variables";
 
 $flex-gap: 0.5em;
+$screen-width-breakpoint: 730px;
 
 .games {
     @include variables.section;
@@ -68,6 +69,29 @@ $flex-gap: 0.5em;
 
                 .smallGame {
                     height: 33%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-width-breakpoint) {
+    .games {
+        .contentContainer {
+            .gameGrid {
+                @include variables.flex-column;
+
+                .largeGame {
+                    height: 25em;
+                }
+
+                .smallGamesRow {
+                    @include variables.flex-row;
+
+                    .smallGame {
+                        @include variables.square-element(25vw);
+                        flex: 1;
+                    }
                 }
             }
         }
