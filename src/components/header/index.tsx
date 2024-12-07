@@ -21,6 +21,7 @@ function Header() {
                         <ul>
                             <li>
                                 <CustomNavLink
+                                    href="#"
                                     iconSrc={gameControllerIcon}
                                     iconAlt="Game Controller Icon"
                                     linkTitle="Games"
@@ -29,6 +30,7 @@ function Header() {
 
                             <li>
                                 <CustomNavLink
+                                    href="https://discord.gg/scriptly"
                                     iconSrc={discordLogoIcon}
                                     iconAlt="Discord Logo Icon"
                                     linkTitle="Discord"
@@ -37,6 +39,7 @@ function Header() {
 
                             <li>
                                 <CustomNavLink
+                                    href="https://www.roblox.com/communities/4345585/Scriptly-Studios#!/about"
                                     iconSrc={robloxLogoIcon}
                                     iconAlt="Roblox Logo Icon"
                                     linkTitle="Roblox"

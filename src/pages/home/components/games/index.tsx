@@ -6,9 +6,12 @@ import movingDayWallpaper0 from "../../../../assets/images/wallpaper/moving-day-
 import roadTripWallpaper0 from "../../../../assets/images/wallpaper/road-trip-0.webp";
 import yachtTycoonWallpaper0 from "../../../../assets/images/wallpaper/yacht-tycoon.webp";
 
+const openURL = (url: string) => window.open(url, "_blank");
+
 interface GameOptions {
     imageURL: string;
     title: string;
+    onClick: () => any;
 }
 
 interface LargeGameOptions extends GameOptions {
@@ -24,6 +27,7 @@ function Games() {
                 <div className={styles.gameGrid}>
                     <div className={styles.largeGame}>
                         <LargeGame
+                            onClick={() => openURL("https://www.roblox.com/games/3214114884/Flag-Wars")}
                             title="Flag Wars"
                             subtitle="Our latest and greatst! an exhilarating and strategic multiplayer game that immerses players in the heart of intense flag-capturing battles"
                             imageURL={flagWarsWallpaper1} />
@@ -31,14 +35,17 @@ function Games() {
 
                     <div className={styles.smallGamesRow}>
                         <SmallGame
+                            onClick={() => openURL("https://www.roblox.com/games/2266829809/Moving-Day-Story")}
                             title="Moving Day"
                             imageURL={movingDayWallpaper0} />
 
                         <SmallGame
+                            onClick={() => openURL("https://www.roblox.com/games/3454572751/Road-Trip-Story")}
                             title="Road Trip"
                             imageURL={roadTripWallpaper0} />
 
                         <SmallGame
+                            onClick={() => openURL("https://www.roblox.com/games/15887241923/NEW-Yacht-Tycoon")}
                             title="Yacht Tycoon"
                             imageURL={yachtTycoonWallpaper0} />
                     </div>
@@ -51,10 +58,12 @@ function Games() {
 function LargeGame({
     imageURL,
     title,
-    subtitle
+    subtitle,
+    onClick
 }: LargeGameOptions) {
     return (
         <div 
+            onClick={onClick}
             className={styles.largeGame}
             style={{
                 backgroundImage: `url(${imageURL})`
@@ -74,10 +83,12 @@ function LargeGame({
 
 function SmallGame({
     imageURL,
-    title
+    title,
+    onClick
 }: GameOptions) {
     return (
-        <div 
+        <div
+            onClick={onClick}
             className={styles.smallGame}
             style={{
                 backgroundImage: `url(${imageURL})`

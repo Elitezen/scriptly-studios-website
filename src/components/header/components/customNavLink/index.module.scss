@@ -5,6 +5,8 @@ $border-width: 5px;
 
 .navLink {
     @include variables.flex-row;
+    text-decoration: none;
+    color: #FFF;
     align-items: center;
     justify-content: space-between;
     padding: 1em 1.5em;

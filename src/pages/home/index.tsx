@@ -1,3 +1,4 @@
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Community from "./components/community";
 import Creators from "./components/creators";
@@ -13,6 +14,7 @@ function Home() {
             <Games />
             <Community />
             <Creators />
+            <Footer />
         </main>
     )
 }
