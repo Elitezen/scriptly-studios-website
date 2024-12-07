@@ -41,6 +41,19 @@ function Footer() {
                     </ul>
                 </li>
 
+                <li>
+                    <h4>Socials</h4>
+
+                    <ul>
+                        <li>
+                            <Link to="https://discord.com/invite/scriptly">Discord</Link>
+                        </li>
+
+                        <li>
+                            <Link to="https://x.com/cylipsonrblx?lang=en">X / Twitter</Link>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </footer>
