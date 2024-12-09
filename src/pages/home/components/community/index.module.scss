@@ -34,7 +34,7 @@ $screen-width-breakpoint: 750px;
                 h3 {
                     font-size: clamp(
                         variables.font-size-val("lg"),
-                        7vw,
+                        7.5vw,
                         variables.font-size-val("hero")
                     );
                     font-weight: 600;
@@ -44,7 +44,7 @@ $screen-width-breakpoint: 750px;
                 p {
                     font-size: clamp(
                         variables.font-size-val("sm"),
-                        1.5vw,
+                        3vw,
                         variables.font-size-val("lg")
                     );
                     margin-top: 1em;

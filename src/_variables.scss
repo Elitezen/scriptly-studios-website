@@ -37,7 +37,7 @@ $font-sizes: (
 
 @mixin section {
     padding: 3em;
-    margin: 8em 0;
+    margin: 4em 0;
 }
 
 @function font-size-val($val) {

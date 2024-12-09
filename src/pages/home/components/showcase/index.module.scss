@@ -91,7 +91,7 @@ $screen-width-breakpoint: 815px;
                 p {
                     font-size: clamp(
                         variables.font-size-val("sm"),
-                        1.5vw,
+                        1.75vw,
                         variables.font-size-val("base")
                     );
                 }
