@@ -7,7 +7,6 @@
         .carouselContainer {
             position: relative;
             overflow: hidden;
-            background-color: red;
 
             .slide {
                 display: inline-block; // Ensures horizontal layout
@@ -29,6 +28,7 @@
                     .textContainer {
                         @include variables.flex-column;
                         align-items: center;
+                        height: 15vh;
 
                         margin: 1em;
 

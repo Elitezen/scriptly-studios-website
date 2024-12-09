@@ -66,6 +66,42 @@ $screen-width-breakpoint: 815px;
                 }
             }
         }
+
+        .buttonRow {
+            @include variables.flex-row;
+            gap: 2em;
+            margin: 4em 0;
+
+            .customButton {
+                @include variables.flex-row;
+                align-items: center;
+                padding: 0.8vw;
+                border-radius: 1px;
+                transition: background-color 150ms ease-in-out;
+
+                img {
+                    @include variables.square-element(clamp(
+                        25px,
+                        2vw,
+                        40px
+                    ));
+                    margin-right: 1.75vw;
+                }
+
+                p {
+                    font-size: clamp(
+                        variables.font-size-val("sm"),
+                        1.5vw,
+                        variables.font-size-val("base")
+                    );
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent !important;
+                }
+            }
+        }
     }
 }
 
@@ -86,6 +122,11 @@ $screen-width-breakpoint: 815px;
                         max-width: none !important;
                     }
                 }
+            }
+
+            .buttonRow {
+                justify-content: center;
+                gap: 5vw
             }
         }
     }
