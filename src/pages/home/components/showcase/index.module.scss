@@ -117,6 +117,13 @@ $screen-width-breakpoint: 815px;
                 justify-self: center;
                 text-align: center;
 
+                .imageContainer {
+                    img {
+                        width: 45vw;
+                        height: 45vw;
+                    }
+                }
+
                 .textContainer {
                     p {
                         max-width: none !important;
@@ -126,7 +133,19 @@ $screen-width-breakpoint: 815px;
 
             .buttonRow {
                 justify-content: center;
-                gap: 5vw
+                gap: 5vw;
+
+                .customButton {
+                    padding: 2vw;
+
+                    p {
+                        font-size: clamp(
+                            variables.font-size-val("sm"),
+                            2.5vw,
+                            variables.font-size-val("base")
+                        );
+                    }
+                }
             }
         }
     }
