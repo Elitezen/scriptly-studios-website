@@ -4,7 +4,8 @@ $flex-gap: 0.5em;
 $screen-width-breakpoint: 730px;
 
 .games {
-    @include variables.section;
+    margin: 4em 0;
+    padding: 3rem;
 
     .contentContainer {
         .gameGrid {
@@ -77,7 +78,11 @@ $screen-width-breakpoint: 730px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .games {
+        padding: 1rem !important;
+        height: 50em;
+
         .contentContainer {
+            height: 45em;
             .gameGrid {
                 @include variables.flex-column;
 

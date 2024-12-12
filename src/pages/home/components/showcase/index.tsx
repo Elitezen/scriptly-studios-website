@@ -66,7 +66,7 @@ function Showcase() {
                     <Button
                         iconURL={twitterXIcon}
                         href="https://x.com/cylipsonrblx?lang=en"
-                        label="X.com"
+                        label="x.com"
                         style={{
                             backgroundColor: '#000',
                             color: '#FFF',

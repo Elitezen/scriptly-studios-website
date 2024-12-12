@@ -84,8 +84,6 @@ $screen-width-breakpoint: 750px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .community {
-        margin-top: 20em;
-
         .contentContainer {
             @include variables.flex-column;
             align-items: center;
