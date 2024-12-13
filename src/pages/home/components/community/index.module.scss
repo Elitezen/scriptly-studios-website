@@ -47,12 +47,12 @@ $screen-width-breakpoint: 750px;
     
                 p {
                     font-size: clamp(
-                        variables.font-size-val("sm"),
-                        3vw,
+                        variables.font-size-val("base"),
+                        2.5vw,
                         variables.font-size-val("lg")
                     );
                     margin-top: 1em;
-                    max-width: 80%;
+                    max-width: 95%;
                     line-height: 1.25em;
                 }
             }
@@ -90,13 +90,14 @@ $screen-width-breakpoint: 750px;
             justify-content: center;
 
             .textSide {
+                width: 100%;
                 @include variables.flex-column;
                 align-items: center;
 
                 .text {
                     h3, p {
                         text-align: center;
-                        max-width: none;
+                        max-width: none !important;
                     }
                 }
 
