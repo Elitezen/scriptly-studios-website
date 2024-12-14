@@ -28,7 +28,7 @@ function Event() {
 
                     <div className={styles.buttonContainer}>
                         <a href="#" rel="external">
-                            <button>Learn More</button>
+                            <button>Explore</button>
                         </a>
                     </div>
                 </div>

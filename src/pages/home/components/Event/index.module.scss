@@ -32,8 +32,8 @@ $screen-width-breakpoint: 750px;
                 @include variables.square-element(85%);
                 min-width: 150px;
                 max-width: 350px;
+                border: 3px solid #FFF;
                 border-radius: 25%;
-                box-shadow: -5px 5px 5px #000;
                 display: block;
                 margin: auto;
             }
@@ -42,7 +42,6 @@ $screen-width-breakpoint: 750px;
         .textSide {
             .text {
                 h3 {
-                    text-shadow: -5px 5px 3px #000;
                     font-size: clamp(
                         variables.font-size-val("lg"),
                         6vw,
@@ -100,13 +99,19 @@ $screen-width-breakpoint: 750px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .event {
-        padding: 30vw 0 !important;
+        padding: 10vw 0 !important;
         clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%) !important;
 
         .contentContainer {
             @include variables.flex-column;
             align-items: center;
             justify-content: center;
+
+            .imageSide {
+                img {
+                    border: 3px solid #FFF;
+                }
+            }
 
             .textSide {
                 width: 100%;
@@ -124,7 +129,7 @@ $screen-width-breakpoint: 750px;
 
                     h3 {
                         text-shadow: none !important;
-                        line-height: 1.25;
+                        line-height: 1.15;
                         font-size: clamp(
                             variables.font-size-val("xl"),
                             12.5vw,

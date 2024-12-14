@@ -4,7 +4,7 @@ import Community from "./components/community";
 import Youtube from "./components/youtube";
 import Games from "./components/games";
 import Showcase from "./components/showcase";
-import Event from "./components/Event";
+import Event from "./components/event";
 // import styles from "./index.module.scss";
 
 function Home() {
@@ -14,8 +14,8 @@ function Home() {
             <Showcase />
             <Games />
             <Event />
-            <Community />
             <Youtube />
+            <Community />
             <Footer />
         </main>
     )

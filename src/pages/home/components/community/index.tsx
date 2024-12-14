@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 
-import discordChatIcon from "../../../../assets/images/icons/discord-chat-icon.svg";
+import discordChatIcon from "../../../../assets/images/icons/discord-logo-icon.svg";
 
 function Community() {
     return (

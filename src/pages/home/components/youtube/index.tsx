@@ -70,7 +70,7 @@ function Youtube() {
             <div className={styles.contentContainer}>
                 <SectionTitle title="YouTube Scene" />
 
-                <p>Coming Soon...</p>
+                <p>Our top 3 content creators and their releases, along with an unnanounced community project are <strong>coming soon</strong>...</p>
             </div>
         </section>
     )

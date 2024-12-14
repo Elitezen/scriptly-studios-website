@@ -5,6 +5,10 @@ $screen-width-breakpoint: 750px;
 
 .community {
     @include variables.section;
+    background-color: map.get(variables.$colors, primary);
+    color: #FFF;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    padding: 10vw;
 
     .contentContainer {
         @include variables.section;
@@ -69,9 +73,9 @@ $screen-width-breakpoint: 750px;
                     button {
                         @include variables.font-size("base");
                         padding: 1em 3em;
-                        border: 4px solid map.get(variables.$colors, "discord");
-                        background-color: map.get(variables.$colors, "discord");
-                        color: #FFF;
+                        border: 4px solid #FFF;
+                        background-color: #FFF;
+                        color: #000;
 
                         transition: background-color 150ms ease-in-out;
 
@@ -89,7 +93,7 @@ $screen-width-breakpoint: 750px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .community {
-        padding: 1em !important;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%) !important;
 
         .contentContainer {
             @include variables.flex-column;
