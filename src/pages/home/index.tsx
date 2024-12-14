@@ -1,7 +1,7 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Community from "./components/community";
-import Creators from "./components/creators";
+import Youtube from "./components/youtube";
 import Games from "./components/games";
 import Showcase from "./components/showcase";
 // import styles from "./index.module.scss";
@@ -13,7 +13,7 @@ function Home() {
             <Showcase />
             <Games />
             <Community />
-            <Creators />
+            <Youtube />
             <Footer />
         </main>
     )

@@ -7,6 +7,11 @@ $screen-width-breakpoint: 550px;
     color: #FFF;
     padding: 3em;
 
+    p {
+        @include variables.font-size("sm");
+        opacity: 0.75;
+    }
+
     ul {
         @include variables.flex-row;
         justify-content: space-around;

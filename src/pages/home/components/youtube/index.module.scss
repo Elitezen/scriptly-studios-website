@@ -1,0 +1,59 @@
+@use "../../../../variables";
+
+.creators {
+    @include variables.section;
+    @include variables.flex-row;
+    align-items: center;
+    justify-content: center;
+
+    .contentContainer {
+        height: 25em;
+        width: 90vw;
+        .carouselContainer {
+            position: relative;
+            overflow: hidden;
+
+            .slide {
+                display: inline-block; // Ensures horizontal layout
+                white-space: "normal"; // Prevents breaking layout
+                height: 50vw;
+
+                .creator {
+                    @include variables.flex-column;
+                    align-items: center;
+
+                    margin: auto;
+                    width: 50vw;
+
+                    img {
+                        margin: 1em;
+                        width: 50%;
+                    }
+
+                    .textContainer {
+                        @include variables.flex-column;
+                        align-items: center;
+
+                        padding: 0 2em;
+                        margin: 1em;
+
+                        h3, p {
+                            margin: 0.5em 0;
+                        }
+
+                        p {
+                            font-size: clamp(
+                                variables.font-size-val("sm"),
+                                4vw,
+                                1.1em,
+                            );
+                            width: 40ch;
+                            text-align: center;
+                            white-space: wrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 function Footer() {
     return (
         <footer className={styles.footer}>
+            <p>Copyright @ 2024 Scriptly Studios. All rights reserved. The content of this website, including but not limited to text, graphics, logos, images, and audio, is the property of Scriptly Studios.</p>
             <ul>
                 <li>
                     <h4>Links</h4>
