@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import crossXIcon from "../../assets/images/icons/x-icon.svg";
 import { Link } from "react-router-dom";
 
-import controllerIcon from "../../assets/images/icons/game-controller-icon.svg";
+// import controllerIcon from "../../assets/images/icons/game-controller-icon.svg";
 import discordIcon from "../../assets/images/icons/discord-logo-icon.svg";
 import robloxIcon from "../../assets/images/icons/roblox-logo-icon.svg";
 import config from "../../config";
@@ -32,13 +32,13 @@ function SideNav() {
 
                 <div className={styles.linksContainer}>
                     <ul>
-                        <li>
+                        {/* <li>
                             <SideNavLink
                                 iconURL={controllerIcon}
                                 label="Games"
                                 href={config.ROBLOX_URL}
                                 />
-                        </li>
+                        </li> */}
 
                         <li>
                             <SideNavLink
