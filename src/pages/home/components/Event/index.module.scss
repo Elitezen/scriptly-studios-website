@@ -1,0 +1,155 @@
+@use "sass:map";
+@use "../../../../variables";
+
+$screen-width-breakpoint: 750px;
+
+.event {
+    @include variables.section;
+    background-color: rgb(230, 33, 33);
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    padding: 7.5em;
+    color: #FFF;
+
+    .contentContainer {
+        @include variables.section;
+        @include variables.flex-row;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        margin: auto;
+
+        .imageSide, .textSide {
+            width: 50%;
+            // border: 2px solid black;
+        }
+
+        .imageSide {
+            @include variables.flex-row;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                @include variables.square-element(85%);
+                min-width: 150px;
+                max-width: 350px;
+                border-radius: 25%;
+                box-shadow: -5px 5px 5px #000;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .textSide {
+            .text {
+                h3 {
+                    text-shadow: -5px 5px 3px #000;
+                    font-size: clamp(
+                        variables.font-size-val("lg"),
+                        6vw,
+                        variables.font-size-val("xxl")
+                    );
+                    font-weight: 600;
+                    line-height: 1.2em;
+                }
+    
+                p {
+                    font-size: clamp(
+                        variables.font-size-val("base"),
+                        1.1vw,
+                        variables.font-size-val("lg")
+                    );
+                    margin-top: 1em;
+                    max-width: 50ch;
+                    line-height: 1.4em;
+                    margin-top: 1.35em;
+                    
+                    strong {
+                        font-weight: bolder;
+                    }
+
+                    ul {
+                        margin: 1em 0 0 1.5em;
+                    }
+                }
+            }
+
+            .buttonContainer {
+                margin-top: 2em;
+
+                a {
+                    button {
+                        @include variables.font-size("base");
+                        padding: 1em 3em;
+                        border: 4px solid #FFF;
+                        background-color: #FFF;
+                        color: #000;
+                        font-weight: 500;
+
+                        transition: background-color 150ms ease-in-out;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-width-breakpoint) {
+    .event {
+        padding: 30vw 0 !important;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%) !important;
+
+        .contentContainer {
+            @include variables.flex-column;
+            align-items: center;
+            justify-content: center;
+
+            .textSide {
+                width: 100%;
+                @include variables.flex-column;
+                align-items: center;
+
+                .text {
+                    @include variables.flex-column;
+                    align-items: center;
+
+                    h3, p {
+                        text-align: center;
+                        max-width: none !important;
+                    }
+
+                    h3 {
+                        text-shadow: none !important;
+                        line-height: 1.25;
+                        font-size: clamp(
+                            variables.font-size-val("xl"),
+                            12.5vw,
+                            variables.font-size-val("xxl")
+                        ) !important;
+                    }
+
+                    p {
+                        @include variables.flex-column;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 115%;
+                        margin-top: 1.55em;
+
+                        ul {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+                    margin-top: 4em;
+                }
+            }
+        }
+    }
+}
