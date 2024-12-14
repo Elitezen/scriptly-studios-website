@@ -8,8 +8,20 @@ import menuIcon from "../../assets/images/icons/hamburger-menu.svg";
 
 import CustomNavLink from "./components/customNavLink";
 import useWindowWidth from "../../(util)/useWindowWidth";
+import SideNav from "../sideNav";
 
 const NAV_SCREEN_WIDTH_BREAKPOINT = 815;
+
+const handleNavOpen = () => {
+    const sideNav = document.querySelector('#sideNav') as HTMLElement | null;
+    if (!sideNav) return console.error("Side Nav selector was not found");
+
+    sideNav.style.display = "block"
+    
+    setTimeout(() => {
+        sideNav.style.right = '0';
+    }, 120);
+}
 
 function Header() {
     const screenWidth = useWindowWidth();
@@ -58,9 +70,14 @@ function Header() {
                             </nav>
                         </div>
                     ) : (
-                        <button className={styles.navButton}>
-                            <img src={menuIcon} alt="Menu Icon" />
-                        </button>
+                        <>
+                            <button 
+                                className={styles.navButton}
+                                onClick={handleNavOpen}>
+                                <img src={menuIcon} alt="Menu Icon" />
+                            </button>
+                            <SideNav />
+                        </>
                     )
                 }
             </div>

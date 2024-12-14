@@ -1,0 +1,67 @@
+@use "../../variables";
+
+$side-nav-width: 65vw;
+
+.sideNav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -$side-nav-width;
+    z-index: 999;
+    width: $side-nav-width;
+    height: 100vh;
+    background-color: #000;
+    box-shadow: -1px 0px 15px #717171;
+    max-width: 500px;
+
+    transition: right 150ms ease-in-out;
+
+    .contentContainer {
+        @include variables.flex-column;
+
+        .heading {
+            padding: 1.25em 1.75em;
+
+            .closeBtn {
+                float: right;
+                background-color: transparent;
+                border: none;
+    
+                img {
+                    @include variables.square-element(2.5em);
+                    @include variables.flex-column;
+                }
+            }
+        }
+
+        .linksContainer {
+            @include variables.flex-column;
+            padding: 1em 1.5em;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin: 2em 0;
+
+                    .sideNavLink {
+                        @include variables.flex-row;
+                        @include variables.font-size("lg");
+                        align-items: flex-start;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: #FFF;
+                        padding: 0.5em 10vw;
+                        border-bottom: 1px solid gray;
+
+
+                        img {
+                            @include variables.square-element(1.75em);
+                            margin-right: 2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

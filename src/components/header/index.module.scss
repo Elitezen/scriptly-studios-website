@@ -2,6 +2,9 @@
 @use "../../variables";
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     color: #FFF;
     background-color: #000;
 
@@ -47,6 +50,10 @@ header {
             img {
                 @include variables.square-element(3.5em);
                 filter: invert(1);
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
     }

@@ -2,8 +2,14 @@
 
 .creators {
     @include variables.section;
+    @include variables.flex-row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10em;
 
     .contentContainer {
+        height: 25em;
+        width: 90vw;
         .carouselContainer {
             position: relative;
             overflow: hidden;
@@ -28,8 +34,8 @@
                     .textContainer {
                         @include variables.flex-column;
                         align-items: center;
-                        height: 15vh;
 
+                        padding: 0 2em;
                         margin: 1em;
 
                         h3, p {
@@ -37,7 +43,12 @@
                         }
 
                         p {
-                            width: 50ch;
+                            font-size: clamp(
+                                variables.font-size-val("sm"),
+                                4vw,
+                                1.1em,
+                            );
+                            width: 40ch;
                             text-align: center;
                             white-space: wrap;
                         }
@@ -53,7 +64,7 @@
                     display: flex;
                     justify-content: space-between;
                     position: absolute;
-                    top: 50%;
+                    top: 15%;
                     width: 90%;
 
                     .navButton {
@@ -62,7 +73,7 @@
                         padding: 0em 1em;
 
                         img {
-                            @include variables.square-element(5vw)
+                            @include variables.square-element(10vw)
                         }
 
                         &:hover {

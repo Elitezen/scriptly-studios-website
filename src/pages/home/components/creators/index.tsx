@@ -73,8 +73,8 @@ function Creators() {
 
                 <div className={styles.carouselContainer}>
                     <CarouselProvider
-                        naturalSlideWidth={100} // Defines the aspect ratio for each slide
-                        naturalSlideHeight={13} // Make sure this complements the width
+                        naturalSlideWidth={40} // Defines the aspect ratio for each slide
+                        naturalSlideHeight={10} // Make sure this complements the width
                         totalSlides={creators.length}
                         visibleSlides={1}
                         infinite={true}
