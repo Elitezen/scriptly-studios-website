@@ -19,6 +19,7 @@ $screen-width-breakpoint: 550px;
     ul {
         @include variables.flex-row;
         width: 102%;
+        max-width: 1010px;
         align-items: flex-start;
         justify-content: space-between;
         list-style: none;
