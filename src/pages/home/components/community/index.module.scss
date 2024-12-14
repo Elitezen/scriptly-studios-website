@@ -38,8 +38,8 @@ $screen-width-breakpoint: 750px;
                 h3 {
                     font-size: clamp(
                         variables.font-size-val("lg"),
-                        7.5vw,
-                        variables.font-size-val("hero")
+                        6vw,
+                        variables.font-size-val("xxl")
                     );
                     font-weight: 600;
                     line-height: 1.2em;
@@ -48,12 +48,17 @@ $screen-width-breakpoint: 750px;
                 p {
                     font-size: clamp(
                         variables.font-size-val("base"),
-                        2.5vw,
+                        1.1vw,
                         variables.font-size-val("lg")
                     );
                     margin-top: 1em;
-                    max-width: 95%;
-                    line-height: 1.25em;
+                    max-width: 50ch;
+                    line-height: 1.4em;
+                    margin-top: 1.35em;
+                    
+                    strong {
+                        font-weight: bolder;
+                    }
                 }
             }
 
@@ -84,6 +89,8 @@ $screen-width-breakpoint: 750px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .community {
+        padding: 1em !important;
+
         .contentContainer {
             @include variables.flex-column;
             align-items: center;
@@ -95,9 +102,26 @@ $screen-width-breakpoint: 750px;
                 align-items: center;
 
                 .text {
+                    @include variables.flex-column;
+                    align-items: center;
+
                     h3, p {
                         text-align: center;
                         max-width: none !important;
+                    }
+
+                    h3 {
+                        line-height: 1;
+                        font-size: clamp(
+                            variables.font-size-val("xl"),
+                            12.5vw,
+                            variables.font-size-val("xxl")
+                        ) !important;
+                    }
+
+                    p {
+                        width: 115%;
+                        margin-top: 1.55em;
                     }
                 }
 

@@ -32,7 +32,7 @@ function Showcase() {
                             </h1>
 
                             <p>
-                                Creating Fun Games For All to Enjoy! Checkout our games, blogs, and socials.
+                                Creating Fun Games For All to Enjoy! Checkout our <strong>games, blogs, and socials</strong>.
                             </p>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ function Showcase() {
                         style={{
                             backgroundColor: '#f00',
                             color: '#FFF',
-                            border: '6px solid #f00'
+                            border: '4px solid #f00'
                         }} />
 
                     <Button
@@ -60,7 +60,7 @@ function Showcase() {
                         style={{
                             backgroundColor: '#5865F2',
                             color: '#FFF',
-                            border: '6px solid #5865F2'
+                            border: '4px solid #5865F2'
                         }} />
 
                     <Button
@@ -70,7 +70,7 @@ function Showcase() {
                         style={{
                             backgroundColor: '#000',
                             color: '#FFF',
-                            border: '6px solid #000'
+                            border: '4px solid #000'
                         }} />
                 </div>
             </div>
