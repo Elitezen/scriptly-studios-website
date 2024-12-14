@@ -1,0 +1,42 @@
+@use "../../../../variables";
+
+.credits {
+    @include variables.section;
+
+    .contentContainer {
+        @include variables.flex-row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        gap: 5vw;
+
+        img {
+            aspect-ratio: 1 / 1;
+            width: clamp(100px, 15vw, 200px);
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+
+        .text {
+            h4, p {
+                margin: 0.25em 0;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: clamp(
+                    variables.font-size-val("base"),
+                    3vw,
+                    variables.font-size-val("lg")
+                );
+            }
+
+            p {
+                @include variables.font-size("base");
+                font-weight: 250;
+                opacity: 0.5;
+            }
+        }
+    }
+}

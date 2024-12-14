@@ -22,6 +22,7 @@ function Event() {
                                 <li>🕶️ +50 new cosmetics</li>
                                 <li>✨ Map Remasters</li>
                                 <li>🔧 Balance Changes</li>
+                                <li>And more!</li>
                             </ul>
                         </p>
                     </div>

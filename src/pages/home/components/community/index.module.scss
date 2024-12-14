@@ -107,10 +107,10 @@ $screen-width-breakpoint: 750px;
 
                 .text {
                     @include variables.flex-column;
-                    align-items: center;
+                    align-items: flex-start;
 
                     h3, p {
-                        text-align: center;
+                        text-align: left;
                         max-width: none !important;
                     }
 

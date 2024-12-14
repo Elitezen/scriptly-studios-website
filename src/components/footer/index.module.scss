@@ -3,22 +3,28 @@
 $screen-width-breakpoint: 550px;
 
 .footer {
+    @include variables.flex-column;
+    align-items: center;
     background-color: #000;
     color: #FFF;
-    padding: 3em;
+    padding: 3em 8em;
 
     p {
-        @include variables.font-size("sm");
+        font-size: 0.85em;
+        display: block;
         opacity: 0.75;
+        margin: 0 auto 3em auto;
     }
 
     ul {
         @include variables.flex-row;
-        justify-content: space-around;
+        width: 102%;
+        align-items: flex-start;
+        justify-content: space-between;
         list-style: none;
 
         li {
-            margin: 0.5em 0;
+            margin: 0.5em;
 
             h4 {
                 @include variables.font-size("lg");
@@ -29,11 +35,15 @@ $screen-width-breakpoint: 550px;
             ul {
                 @include variables.flex-column;
 
-                a {
-                    font-weight: 400;
-                    color: #FFF;
-                    text-decoration: none;
-                    opacity: 0.5;
+                li {
+                    margin: 0.5em 0;
+                    a {
+                        margin: 0 !important;
+                        font-weight: 400;
+                        color: #FFF;
+                        text-decoration: none;
+                        opacity: 0.5;
+                    }
                 }
             }
         }
@@ -42,9 +52,11 @@ $screen-width-breakpoint: 550px;
 
 @media screen and (max-width: $screen-width-breakpoint) {
     .footer {
+        padding: 3em 2em !important;
+
         ul {
             @include variables.flex-column;
-            margin: 2em 0;
+            margin: 1em 0;
         }
     }
 }

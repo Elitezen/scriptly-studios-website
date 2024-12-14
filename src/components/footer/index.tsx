@@ -51,6 +51,10 @@ function Footer() {
                         </li>
 
                         <li>
+                            <Link to="https://www.youtube.com/channel/UCJV2MmXzD-4OCAsKGRzZXzA">YouTube</Link>
+                        </li>
+
+                        <li>
                             <Link to="https://x.com/cylipsonrblx?lang=en">X / Twitter</Link>
                         </li>
                     </ul>
