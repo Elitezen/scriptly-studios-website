@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
 
 import eventImg from "../../../../assets/images/wallpaper/flag-wars-xmas-event.png";
+import config from "../../../../config";
 
 function Event() {
     return (
@@ -28,7 +29,7 @@ function Event() {
                     </div>
 
                     <div className={styles.buttonContainer}>
-                        <a href="#" rel="external">
+                        <a href={config.EVENT_URL} rel="external">
                             <button>Explore</button>
                         </a>
                     </div>

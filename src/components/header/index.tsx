@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 
 import scriptlyStudiosLogo from "../../assets/images/icons/scriptly-studios-logo.svg";
-import gameControllerIcon from "../../assets/images/icons/game-controller-icon.svg";
+// import gameControllerIcon from "../../assets/images/icons/game-controller-icon.svg";
 import discordLogoIcon from "../../assets/images/icons/discord-logo-icon.svg";
 import robloxLogoIcon from "../../assets/images/icons/roblox-logo-icon.svg";
 import menuIcon from "../../assets/images/icons/hamburger-menu.svg";
@@ -9,6 +9,7 @@ import menuIcon from "../../assets/images/icons/hamburger-menu.svg";
 import CustomNavLink from "./components/customNavLink";
 import useWindowWidth from "../../(util)/useWindowWidth";
 import SideNav from "../sideNav";
+import config from "../../config";
 
 const NAV_SCREEN_WIDTH_BREAKPOINT = 815;
 
@@ -40,18 +41,18 @@ function Header() {
                         <div className={styles.navContainer}>
                             <nav>
                                 <ul>
-                                    <li>
+                                    {/* <li>
                                         <CustomNavLink
-                                            href="#"
+                                            href={config.ROBLOX_URL}
                                             iconSrc={gameControllerIcon}
                                             iconAlt="Game Controller Icon"
                                             linkTitle="Games"
                                             />
-                                    </li>
+                                    </li> */}
 
                                     <li>
                                         <CustomNavLink
-                                            href="https://discord.gg/scriptly"
+                                            href={config.DISCORD_URL}
                                             iconSrc={discordLogoIcon}
                                             iconAlt="Discord Logo Icon"
                                             linkTitle="Discord"
@@ -60,7 +61,7 @@ function Header() {
 
                                     <li>
                                         <CustomNavLink
-                                            href="https://www.roblox.com/communities/4345585/Scriptly-Studios#!/about"
+                                            href={config.ROBLOX_URL}
                                             iconSrc={robloxLogoIcon}
                                             iconAlt="Roblox Logo Icon"
                                             linkTitle="Roblox"

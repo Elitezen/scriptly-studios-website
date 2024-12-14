@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import controllerIcon from "../../assets/images/icons/game-controller-icon.svg";
 import discordIcon from "../../assets/images/icons/discord-logo-icon.svg";
 import robloxIcon from "../../assets/images/icons/roblox-logo-icon.svg";
+import config from "../../config";
 
 const handleNavCloseClick = () => {
     const sideNav = document.querySelector('#sideNav') as HTMLElement | null;
@@ -35,7 +36,7 @@ function SideNav() {
                             <SideNavLink
                                 iconURL={controllerIcon}
                                 label="Games"
-                                href="#"
+                                href={config.ROBLOX_URL}
                                 />
                         </li>
 
@@ -43,7 +44,7 @@ function SideNav() {
                             <SideNavLink
                                 iconURL={discordIcon}
                                 label="Discord"
-                                href="#"
+                                href={config.DISCORD_URL}
                                 />
                         </li>
 
@@ -51,7 +52,7 @@ function SideNav() {
                             <SideNavLink
                                 iconURL={robloxIcon}
                                 label="Roblox"
-                                href="#"
+                                href={config.ROBLOX_URL}
                                 />
                         </li>
                     </ul>

@@ -5,6 +5,7 @@ import flagWarsWallpaper1 from "../../../../assets/images/wallpaper/flag-wars-1.
 import movingDayWallpaper0 from "../../../../assets/images/wallpaper/moving-day-0.webp";
 import roadTripWallpaper0 from "../../../../assets/images/wallpaper/road-trip-0.webp";
 import yachtTycoonWallpaper0 from "../../../../assets/images/wallpaper/yacht-tycoon.webp";
+import config from "../../../../config";
 
 const openURL = (url: string) => window.open(url, "_blank");
 
@@ -27,7 +28,7 @@ function Games() {
                 <div className={styles.gameGrid}>
                     <div className={styles.largeGame}>
                         <LargeGame
-                            onClick={() => openURL("https://www.roblox.com/games/3214114884/Flag-Wars")}
+                            onClick={() => openURL(config.FLAG_WARS_URL)}
                             title="Flag Wars"
                             subtitle="Our latest and greatst! an exhilarating and strategic multiplayer game that immerses players in the heart of intense flag-capturing battles →"
                             imageURL={flagWarsWallpaper1} />
@@ -35,17 +36,17 @@ function Games() {
 
                     <div className={styles.smallGamesRow}>
                         <SmallGame
-                            onClick={() => openURL("https://www.roblox.com/games/2266829809/Moving-Day-Story")}
+                            onClick={() => openURL(config.MOVING_DAY_URL)}
                             title="Moving Day →"
                             imageURL={movingDayWallpaper0} />
 
                         <SmallGame
-                            onClick={() => openURL("https://www.roblox.com/games/3454572751/Road-Trip-Story")}
+                            onClick={() => openURL(config.ROAD_TRIP_URL)}
                             title="Road Trip →"
                             imageURL={roadTripWallpaper0} />
 
                         <SmallGame
-                            onClick={() => openURL("https://www.roblox.com/games/15887241923/NEW-Yacht-Tycoon")}
+                            onClick={() => openURL(config.YACHT_TYCOON_URL)}
                             title="Yacht Tycoon →"
                             imageURL={yachtTycoonWallpaper0} />
                     </div>

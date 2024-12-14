@@ -8,6 +8,7 @@ import discordIcon from "../../../../assets/images/icons/discord-logo-icon.svg";
 
 import { CSSProperties } from "react";
 import openURL from "../../../../(util)/openURL";
+import config from "../../../../config";
 
 const SCREEN_WIDTH_BREAKPOINT = 815;
 
@@ -45,7 +46,7 @@ function Showcase() {
                 <div className={styles.buttonRow}>
                     <Button
                         iconURL={youtubeIcon}
-                        href="https://www.youtube.com/channel/UCJV2MmXzD-4OCAsKGRzZXzA"
+                        href={config.YOUTUBE_URL}
                         label="YouTube"
                         style={{
                             backgroundColor: '#f00',
@@ -55,7 +56,7 @@ function Showcase() {
 
                     <Button
                         iconURL={discordIcon}
-                        href="https://discord.com/invite/scriptly"
+                        href={config.DISCORD_URL}
                         label="Discord"
                         style={{
                             backgroundColor: '#5865F2',
@@ -65,7 +66,7 @@ function Showcase() {
 
                     <Button
                         iconURL={twitterXIcon}
-                        href="https://x.com/cylipsonrblx?lang=en"
+                        href={config.X_URL}
                         label="x.com"
                         style={{
                             backgroundColor: '#000',

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
+import config from "../../config";
 
 function Footer() {
     return (
@@ -15,11 +16,11 @@ function Footer() {
                         </li>
 
                         <li>
-                            <Link to="https://www.roblox.com/communities/4345585/Scriptly-Studios#!/about">Roblox Page</Link>
+                            <Link to={config.ROBLOX_URL}>Roblox Page</Link>
                         </li>
 
                         <li>
-                            <Link to="https://discord.com/login?redirect_to=%2Fchannels%2F715258365177233532%2F1150212434523594884">Support</Link>
+                            <Link to={config.SUPPORT_URL}>Support</Link>
                         </li>
                     </ul>
                 </li>
@@ -29,15 +30,15 @@ function Footer() {
 
                     <ul>
                         <li>
-                            <Link to="https://www.roblox.com/games/3214114884/Flag-Wars">Flag Wars</Link>
+                            <Link to={config.FLAG_WARS_URL}>Flag Wars</Link>
                         </li>
 
                         <li>
-                            <Link to="https://www.roblox.com/games/2266829809/Moving-Day-Story">Moving Day</Link>
+                            <Link to={config.MOVING_DAY_URL}>Moving Day</Link>
                         </li>
 
                         <li>
-                            <Link to="https://www.roblox.com/games/3454572751/Road-Trip-Story">Road Trip</Link>
+                            <Link to={config.ROAD_TRIP_URL}>Road Trip</Link>
                         </li>
                     </ul>
                 </li>
@@ -47,15 +48,15 @@ function Footer() {
 
                     <ul>
                         <li>
-                            <Link to="https://discord.com/invite/scriptly">Discord</Link>
+                            <Link to={config.DISCORD_URL}>Discord</Link>
                         </li>
 
                         <li>
-                            <Link to="https://www.youtube.com/channel/UCJV2MmXzD-4OCAsKGRzZXzA">YouTube</Link>
+                            <Link to={config.YOUTUBE_URL}>YouTube</Link>
                         </li>
 
                         <li>
-                            <Link to="https://x.com/cylipsonrblx?lang=en">X / Twitter</Link>
+                            <Link to={config.X_URL}>X / Twitter</Link>
                         </li>
                     </ul>
                 </li>

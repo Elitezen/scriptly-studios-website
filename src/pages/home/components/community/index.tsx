@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
 
 import discordChatIcon from "../../../../assets/images/icons/discord-logo-icon.svg";
+import config from "../../../../config";
 
 function Community() {
     return (
@@ -21,7 +22,7 @@ function Community() {
                     </div>
 
                     <div className={styles.buttonContainer}>
-                        <a href="#" rel="external">
+                        <a href={config.DISCORD_URL} rel="external">
                             <button>Join</button>
                         </a>
                     </div>
