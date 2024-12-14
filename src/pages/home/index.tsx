@@ -4,7 +4,7 @@ import Community from "./components/community";
 import Youtube from "./components/youtube";
 import Games from "./components/games";
 import Showcase from "./components/showcase";
-import Event from "./components/event";
+import Event from "./components/event"
 import Credits from "./components/credits";
 // import styles from "./index.module.scss";
 
