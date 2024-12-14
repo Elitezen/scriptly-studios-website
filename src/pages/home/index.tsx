@@ -6,6 +6,7 @@ import Games from "./components/games";
 import Showcase from "./components/showcase";
 import Event from "./components/event"
 import Credits from "./components/credits";
+import { Analytics } from "@vercel/analytics/react";
 // import styles from "./index.module.scss";
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
             <Community />
             <Credits />
             <Footer />
+            <Analytics />
         </main>
     )
 }
