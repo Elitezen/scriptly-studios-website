@@ -15,7 +15,7 @@ function Event() {
                     <div className={styles.text}>
                         <h3>New Season 3 Update for Flag Wars!</h3>
                         <p>
-                            Get festive with the new Christmas update for Flag Wars!
+                            Get festive with a brand new, content packed Flag Wars Christmas Update:
                             <ul>
                                 <li>⚔️ 2 new weapons</li>
                                 <li>🗺️ New Santas Workshop map</li>

@@ -16,7 +16,7 @@ function Community() {
                         <h3>Join the Community</h3>
                         <p>
                             Become part of Scriptly Studios' core community!
-                            Talk with other players, join giveaways, and notified
+                            Talk with other players, join giveaways, and get notified
                             of upcoming <strong>events, updates, and gamenights</strong>.
                         </p>
                     </div>
