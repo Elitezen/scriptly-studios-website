@@ -139,12 +139,23 @@ $screen-width-breakpoint: 815px;
             }
 
             .buttonRow {
+                @include variables.flex-column;
+                align-items: center;
+                justify-content: center;
                 margin: 1.5em 0 !important;
                 justify-content: center;
-                gap: 5vw;
+                gap: 3vw;
 
                 .customButton {
-                    padding: 2vw;
+                    @include variables.flex-row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3vw;
+                    width: 85%;
+
+                    img {
+                        margin-right: 2em;
+                    }
 
                     p {
                         font-size: clamp(
