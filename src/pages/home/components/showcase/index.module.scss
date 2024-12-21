@@ -9,7 +9,7 @@ $screen-width-breakpoint: 815px;
     background-repeat: no-repeat;
 
     .contentContainer {
-        padding: 4em 12vw;
+        padding: 3em 12vw;
 
         .heroContainer {
             @include variables.flex-row;
@@ -30,7 +30,7 @@ $screen-width-breakpoint: 815px;
                         font-weight: 600;
                         font-size: clamp(
                             variables.font-size-val("xl"),
-                            9vw,
+                            8vw,
                             10em
                         )
                     }
@@ -74,14 +74,13 @@ $screen-width-breakpoint: 815px;
 
         .buttonRow {
             @include variables.flex-row;
-            flex-wrap: wrap;
             gap: 2em;
             margin: 4em 0;
 
             .customButton {
                 @include variables.flex-row;
                 align-items: center;
-                padding: 0.6vw 1vw;
+                padding: 0.75em 1.25em;
                 border-radius: 1px;
                 transition: background-color 150ms ease-in-out;
 
@@ -97,7 +96,7 @@ $screen-width-breakpoint: 815px;
                 p {
                     font-size: clamp(
                         variables.font-size-val("sm"),
-                        1.75vw,
+                        1vw,
                         variables.font-size-val("base")
                     );
                 }
